@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<meta name="renderer" content="webkit" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="force-rendering" content="webkit" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#424242" />
+		<meta name="description" content="EXCFS">
+		<meta name="keywords" content="EXCFS">
+		<meta name="author" content="CZOIers">
+
+		<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.5.1/jquery.min.js"></script>
+		<!-- <script src="/js/refresh.js"></script> -->
+		<script type="text/javascript" src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/izitoast/1.4.0/js/iziToast.min.js"></script>
+		<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/aplayer/1.10.1/APlayer.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script>if (false||(!!window.MSInputMethodContext&&!!document.documentMode)) window.location.href="/upgrade-your-browser/index.html?referrer="+encodeURIComponent(window.location.href);</script>
+		<script src="js/51LA.js"></script>
+
+		<link rel="stylesheet" href="https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css">
+		<link rel="stylesheet" type="text/css" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/5.1.0/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/mobile.css">
+		<link rel="stylesheet" type="text/css" href="css/loading.css">
+		<link rel="stylesheet" type="text/css" href="css/animation.css">
+		<link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/izitoast/1.4.0/css/iziToast.min.css">
+		<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+		<link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/aplayer/1.10.1/APlayer.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+		<link rel="manifest" href="manifest.json">
+		<link rel="icon" href="favicon.ico">
+		<link rel="apple-touch-icon" href="img/icon/apple-touch-icon.png">
+
+		<title>Main Page | Extend CFS</title>
+	</head>
+	<body>
+		<!-- 加载动画 -->
+		<div id="loading-box">
+			<div class="loading-left-bg"></div>
+			<div class="loading-right-bg"></div>
+			<div class="spinner-box">
+				<div class="loader">
+					<div class="inner one"></div>
+					<div class="inner two"></div>
+					<div class="inner three"></div>
+				</div>
+				<div class="loading-word">
+					<p class="loading-title" id="loading-title">Extended-CFSOI</p>
+					<span id="loading-text">Loading</span>
+				</div>
+			</div>
+		</div>
+
+		<section id="section" class="section">
+			<!-- 背景图片 -->
+			<div class="bg-all">
+				<img id="bg" onerror="this.classList.add('error');"></img>
+				<div class="cover"></div>
+			</div>
+			<!-- 鼠标指针 -->
+			<div id="g-pointer-1"></div>
+			<div id="g-pointer-2"></div>
+			<!-- Everything -->
+			<main id="main" class="main">
+				<div class="container" id="container">
+					<div class="row" id="row">
+						<!--Left-->
+						<div class="col left">
+							<!--基本信息-->
+							<div class="main-left">
+								<!--Logo-->
+								<div class="main-img">
+									<div class="img-title">
+										<span class="img-title-big" id="logo-text-1">Extended</span>
+										&emsp;
+										<span class="img-text" id="logo-text-2">CFSOI</span>
+									</div>
+								</div>
+								<!--介绍信息-->
+								<div class="message cards" id="switchmore">
+									<div class="des" id="des">
+										<i class="fa-solid fa-quote-left"></i>
+											<div class="des-title">
+												<span id="change">Extended - CFSOI</span>
+												<br />
+												<span id="change1">一个为常外OIers设计的网站</span>
+											</div>
+										<i class="fa-solid fa-quote-right"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--Right-->
+						<div class="logo cards" style="display: none" id="changemore">
+							<a class="logo-text" id="logo-text-small" style="font">Extended-CFSOI</a>
+						</div>
+						<div class="col right">
+							<div class="main-right">
+								<!--功能区-->
+								<div class="row rightone" id="rightone">
+									<div class="col times">
+										<!--时间-->
+										<div class="time cards" id="upWeather">
+											<div class="timeshow" id="time">
+												2000&nbsp;年&nbsp;0&nbsp;月&nbsp;00&nbsp;日&nbsp;
+												<span class="weekday">星期一</span><br><span class="time-text">00:00:00</span>
+											</div>
+											<div class="weather">
+												<iframe width="300" height="30" frameborder="0" scrolling="no" hspace="0" src="https://i.tianqi.com/?c=code&a=getcode&id=34&py=changzhou&icon=1"></iframe>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--分隔线-->
+								<div class="line">
+									<i class="fa-solid fa-link"></i>
+									<span class="line-text">功能区</span>
+								</div>
+								<!--网站链接-->
+								<div class="link">
+									<!--第一组-->
+									<div class="row">
+										<div class="col">
+											<!-- N -->
+											<a id="link-url-1" href="sol" target="_blank">
+												<div class="link-card cards">
+													<!-- <i id="link-icon-1" class="fa-solid fa-blog"></i> -->
+													<span class="link-name" id="link-name-1">CFSOI题解</span>
+												</div>
+											</a>
+										</div>
+										<div class="col 2">
+											<!-- N -->
+											<a id="link-url-2" href="bbs" target="_blank">
+												<div class="link-card cards">
+													<!-- <i id="link-icon-2" class="fa-solid fa-cloud"></i> -->
+													<span class="link-name" id="link-name-2">CFS论坛系统</span>
+												</div>
+											</a>
+										</div>
+										<div class="col">
+											<!-- N -->
+											<a id="link-url-3" href="http://61.177.80.215" target="_blank">
+												<div class="link-card cards">
+													<!-- <i id="link-icon-3" class="fa-solid fa-music"></i> -->
+													<span class="link-name" id="link-name-3">返回主站</span>
+												</div>
+											</a>
+										</div>
+									</div>
+									<!--第二组-->
+									<div class="row" style="margin-top: 1.5rem;">
+										<div class="col">
+											<!-- N -->
+											<a id="link-url-4" href="" target="_blank">
+												<div class="link-card cards">
+													<!-- <i id="link-icon-4" class="fa-solid fa-compass"></i> -->
+													<span class="link-name" id="link-name-4">反馈</span>
+												</div>
+											</a>
+										</div>
+										<div class="col 2">
+											<!-- N -->
+											<a id="link-url-5" href="/url/web.html" target="_blank">
+												<div class="link-card cards">
+													<!-- <i id="link-icon-5" class="fa-solid fa-book-bookmark"></i> -->
+													<span class="link-name" id="link-name-5">网址集</span>
+												</div>
+											</a>
+										</div>
+										<div class="col">
+											<a id="openmore">
+												<div class="link-card cards">
+													<span class="link-name">更多</span>
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--展开菜单按钮-->
+					<div class="menu" id="switchmenu">
+						<a class="munu-button cards" id="menu">
+							<i class="fa-solid fa-bars"></i>
+						</a>
+					</div>
+					<!--更多内容-->
+					<div class="more" id="more">
+						<!--关闭按钮-->
+						<div class="close fixed-top" id="close">
+							<i class="fa-solid fa-circle-xmark"></i>
+						</div>
+						<div class="line" style="margin-top: 1rem;">
+							<i class="fa-solid fa-angle-left"></i>
+							<span class="line-text">时间胶囊</span>
+							<i class="fa-solid fa-angle-right"></i>
+						</div>
+						<div class="date" id="date">
+							<div class="item" id="dayProgress">
+								<div class="date-text" style="margin-top: 0rem;">今日已经度过了&nbsp;<span></span>&nbsp;小时</div>
+								<div class="progress">
+									<div class="progress-bar"></div>
+								</div>
+							</div>
+							<div class="item" id="weekProgress">
+								<div class="date-text">本周已经度过了&nbsp;<span></span>&nbsp;天</div>
+								<div class="progress">
+									<div class="progress-bar"></div>
+								</div>
+							</div>
+							<div class="item" id="monthProgress">
+								<div class="date-text">本月已经度过了&nbsp;<span></span>&nbsp;天</div>
+								<div class="progress">
+									<div class="progress-bar"></div>
+								</div>
+							</div>
+							<div class="item" id="yearProgress">
+								<div class="date-text">今年已经度过了&nbsp;<span></span>&nbsp;个月</div>
+								<div class="progress">
+									<div class="progress-bar"></div>
+								</div>
+							</div>
+						</div>
+						<div class="line">
+							<i class="fa-solid fa-angle-left"></i>
+							<span class="line-text">Upcoming Events</span>
+							<i class="fa-solid fa-angle-right"></i>
+						</div>
+						距离CSP-2023第一轮 还剩286天
+						<br/>
+						距离CSP-2023第二轮 还剩316天
+						<br/>
+						距离NOIP-2023 还剩???天
+						<br/>
+					</div>
+					<!--更多页面-->
+					<div class="box" id="box" style="display: none">
+						<div class="box-wrapper">
+							<!--关闭按钮-->
+							<div class="closebox fixed-top" id="closemore">
+								<i class="fa-solid fa-circle-xmark"></i>
+							</div>
+							<!--左侧内容-->
+							<div class="box-left">
+								<div class="img-title">
+									<span class="img-title-big" id="logo-title-other">Extended</span>
+									&emsp;
+									<span class="img-text" id="logo-title-other-small">CFSOI</span><br />
+									<span class="img-text">&nbsp;v&nbsp;0.1</span>
+								</div>
+								<!--更多内容-->
+								<div class="accordion" id="accordion">
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="headingOne">
+											<button class="accordion-button" type="button" data-bs-toggle="collapse"
+												data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+												关于
+											</button>
+										</h2>
+										<br/>
+										&emsp; This is a website made for a better use for <a href="http://61.177.80.215">CFSOI</a>
+										<br/>
+										&emsp; It is made by GCH
+										<br/>
+										&emsp; It is not complete though
+										<br/>
+										&emsp; If you can, please help us by Donating us
+										<br/>
+										&emsp; You can also be the contributors
+									</div>
+
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="headingTwo">
+											<button class="accordion-button collapsed" type="button"
+												data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+												aria-expanded="false" aria-controls="collapseTwo">
+												更新日志
+											</button>
+										</h2>
+										<div id="collapseTwo" class="accordion-collapse collapse"
+											aria-labelledby="headingTwo" data-bs-parent="#accordion">
+											<div class="accordion-body">
+												<div class="upnote">
+													<span class="uptext">
+														<i class="fa-solid fa-circle-plus"></i>&nbsp;2022/12/10 Alpha 0.1 GCH创建该网站
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--Aplayer-->
+							<div class="box-right">
+								<span id="power">
+									Copyright&nbsp;&copy;
+									<script>document.write((new Date()).getFullYear());</script>
+									CZOIers &amp; Q老师
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<!-- 版权信息 -->
+			<footer id="footer" class="fixed-bottom footer">
+				<div class="power">
+					<span id="power">
+						Copyright&nbsp;&copy;
+						<script>document.write((new Date()).getFullYear());</script>
+						CZOIers &amp; Q老师
+					</span>
+					&emsp;|&emsp;
+					<span id="made">
+						Theme&nbsp;by&nbsp;
+						<a href="https://github.com/imsyy/home" target="_blank">imsyy</a>
+					</span>
+					&emsp;|&emsp;
+					Modified by <a href="https://github.com/charliegao2009">GCH</a>
+					&emsp;|&emsp;
+					<a href="back" id="beian" target="_blank">网站备案</a>
+					&emsp;|&emsp;
+					<a href="" id="beian" target="_blank" style="font-family: Pacifico-Regular;">Donate us!</a>
+				</div>
+			</footer>
+		</section>
+
+		<script>
+			if ("serviceWorker" in navigator) {
+				window.addEventListener("load", function () {
+					navigator.serviceWorker.register("sw.js");
+				});
+			}
+		</script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/set.js"></script>
+		<script type="text/javascript" src="js/time.js"></script>
+		<script type="text/javascript" src="js/js.cookie.js"></script>
+		<script type="text/javascript" src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+	</body>
+</html>
