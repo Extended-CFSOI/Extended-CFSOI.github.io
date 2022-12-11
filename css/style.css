@@ -6,15 +6,6 @@ GitHub：https://github.com/imsyy/home
 */
 
 @charset "utf-8";
-
-/* @font-face {
-    font-family: "MiSans";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('font/MiSans-Regular.subset.woff2') format('woff2');
-} */
-
 @font-face {
     font-family: "Pacifico-Regular";
     src: url('../font/Pacifico-Regular.ttf') format('truetype');
