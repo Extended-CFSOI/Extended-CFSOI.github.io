@@ -57,24 +57,9 @@ window.addEventListener('load', function () {
             timeout: 2500,
             icon: false,
             title: hello,
-            message: '欢迎来到我们的主页'
+            message: 'Welcome to Extended-CFSOI'
         });
     }, 800);
-
-    //延迟加载音乐播放器
-    let element = document.createElement("script");
-    element.src = "./js/music.js";
-    document.body.appendChild(element);
-
-    //中文字体缓加载-此处写入字体源文件 （暂时弃用）
-    //先行加载简体中文子集，后续补全字集
-    //由于压缩过后的中文字体仍旧过大，可转移至对象存储或 CDN 加载
-    // const font = new FontFace(
-    //     "MiSans",
-    //     "url(" + "./font/MiSans-Regular.woff2" + ")"
-    // );
-    // document.fonts.add(font);
-
     //移动端去除鼠标样式
     if (Boolean(window.navigator.userAgent.match(/AppWebKit.*Mobile.*/))) {
         $('#g-pointer-2').css("display", "none");
@@ -86,56 +71,6 @@ setTimeout(function () {
     $('#loading-text').html("字体及文件加载可能需要一定时间")
 }, 3000);
 
-// 新春灯笼 （ 需要时可取消注释 ）
-// new_element=document.createElement("link");
-// new_element.setAttribute("rel","stylesheet");
-// new_element.setAttribute("type","text/css");
-// new_element.setAttribute("href","./css/lantern.css");
-// document.body.appendChild(new_element);
-
-// new_element=document.createElement("script");
-// new_element.setAttribute("type","text/javascript");
-// new_element.setAttribute("src","./js/lantern.js");
-// document.body.appendChild(new_element);
-
-//获取一言
-fetch('https://v1.hitokoto.cn?max_length=24')
-    .then(response => response.json())
-    .then(data => {
-        $('#hitokoto_text').html(data.hitokoto)
-        $('#from_text').html(data.from)
-    })
-    .catch(console.error)
-
-let times = 0;
-$('#hitokoto').click(function () {
-    if (times == 0) {
-        times = 1;
-        let index = setInterval(function () {
-            times--;
-            if (times == 0) {
-                clearInterval(index);
-            }
-        }, 1000);
-        fetch('https://v1.hitokoto.cn?max_length=24')
-            .then(response => response.json())
-            .then(data => {
-                $('#hitokoto_text').html(data.hitokoto)
-                $('#from_text').html(data.from)
-            })
-            .catch(console.error)
-    } else {
-        iziToast.show({
-            timeout: 1000,
-            icon: "fa-solid fa-circle-exclamation",
-            message: '你点太快了吧'
-        });
-    }
-});
-
-//获取天气
-//请前往 https://www.mxnzp.com/doc/list 申请 app_id 和 app_secret
-//请前往 https://dev.qweather.com/ 申请 key
 const add_id = "spntjcq1nnnkwft6"; // app_id
 const app_secret = "TkpzVkMvWkOyTVNxYIhQaGxGQUo2QTO9"; // app_secret
 const key = "abaa1a70101b49fc926a431ea9ce73ab" // key
@@ -239,27 +174,6 @@ $("#social").mouseover(function () {
     });
 });
 
-$("#github").mouseover(function () {
-    $("#link-text").html("去 Github 看看");
-}).mouseout(function () {
-    $("#link-text").html("通过这里联系我");
-});
-$("#qq").mouseover(function () {
-    $("#link-text").html("欢迎加入CZ-OIers群聊");
-}).mouseout(function () {
-    $("#link-text").html("通过这里联系我");
-});
-$("#email").mouseover(function () {
-    $("#link-text").html("来封 Email");
-}).mouseout(function () {
-    $("#link-text").html("通过这里联系我");
-});
-$("#telegram").mouseover(function () {
-    $("#link-text").html("你懂的 ~");
-}).mouseout(function () {
-    $("#link-text").html("通过这里联系我");
-});
-
 //自动变灰
 let myDate = new Date;
 let mon = myDate.getMonth() + 1;
@@ -272,7 +186,7 @@ for (let day of days) {
             '<style>html{-webkit-filter:grayscale(100%);-moz-filter:grayscale(100%);-ms-filter:grayscale(100%);-o-filter:grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);_filter:none}</style>'
         );
         $("#change").html("Silence&nbsp;in&nbsp;silence");
-        $("#change1").html("今天是中国国家纪念日，全站已切换为黑白模式");
+        $("#change1").html("为逝者默哀，全站已切换为黑白模式");
         window.addEventListener('load', function () {
             setTimeout(function () {
                 iziToast.show({
@@ -291,11 +205,11 @@ $('#switchmore').on('click', function () {
     shoemore = !shoemore;
     if (shoemore && $(document).width() >= 990) {
         $('#container').attr('class', 'container mores');
-        $("#change").html("Oops&nbsp;!");
-        $("#change1").html("哎呀，这都被你发现了（ 再点击一次可关闭 ）");
+        $("#change").html("更多");
+        $("#change1").html("More!");
     } else {
         $('#container').attr('class', 'container');
-        $("#change").html("Hello&nbsp;World&nbsp;!");
+        $("#change").html("Extended-CFSOI");
         $("#change1").html("一个建立于 21 世纪的小站，存活于互联网的边缘");
     }
 });
@@ -373,16 +287,6 @@ $("#more").hover(function () {
     $('#close').css("display", "none");
 })
 
-//屏蔽右键
-document.oncontextmenu = function () {
-    iziToast.show({
-        timeout: 2000,
-        icon: "fa-solid fa-circle-exclamation",
-        message: '为了浏览体验，本站禁用右键'
-    });
-    return false;
-}
-
 //控制台输出
 //console.clear();
 let styleTitle1 = `
@@ -397,17 +301,17 @@ color: rgb(244,167,89);
 let styleContent = `
 color: rgb(30,152,255);
 `
-let title1 = 'CZOIersの主页'
+let title1 = 'Extended-CFSOI'
 let title2 = `
 不要忘记开long long
-不要写错freopen                                                                                  
+不要写错freopen                                                                              
 `
 let content = `
-版 本 号：1.0
-更新日期：2022-11-06
+版 本 号：0.1a
+更新日期：2022-12-10
 
-主页:  http://czoier.top/
-Github:  https://github.com/oier-chen/oier-chen.github.io
+Made by GCH
+Github:  https://github.com/extended-cfsoi/extended-cfsoi.github.io
 `
 console.log(`%c${title1} %c${title2}
 %c${content}`, styleTitle1, styleTitle2, styleContent)
