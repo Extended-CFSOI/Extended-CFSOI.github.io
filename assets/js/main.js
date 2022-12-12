@@ -210,7 +210,7 @@ $('#switchmore').on('click', function () {
     } else {
         $('#container').attr('class', 'container');
         $("#change").html("Extended-CFSOI");
-        $("#change1").html("一个建立于 21 世纪的小站，存活于互联网的边缘");
+        $("#change1").html("一个为常外OIers设计的网站<br/>一个建立于 21 世纪的小站，存活于互联网的边缘");
     }
 });
 
